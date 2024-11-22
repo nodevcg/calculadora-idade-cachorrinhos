@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} /* reset css */
+
+body {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100; /* definição da fonte */
+    background-image: url(./cachorrofofinho.jpg);
+    background-size: 100px 100px; 
+    background-repeat: repeat; 
+    background-position: top left; /* posicionando a imagem de fundo */
+}
+
+.container {  /* div principal */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* centralizando o container */
+    text-align: center; /* centralizando o texto */
+    border: 1px solid black; 
+    border-radius: 10px; /* mexendo com as bordas */
+    box-shadow: -2px 2px 10px black; /* mexendo com as sombras */
+    padding: 20px; /* espaçamento interno */
+    background-color: #dfdff4; /* cor de fundo do container */
+}
+
+#box-idade { /* caixa onde o usuário colocará a idade */
+    text-align: center; /* centralizando o placeholder e texto do usuário */
+    border-radius: 10px; 
+    padding: 5px; 
+    box-shadow: -1px 1px 7px black;
+}
+
+#botao {
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #d1d1ea;
+    cursor: pointer; /* cursor mudará ao passar o mouse por cima */
+    border: 1px solid black;
+    box-shadow: -1px 1px 7px black;
+}
