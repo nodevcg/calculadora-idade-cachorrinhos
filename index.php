@@ -50,7 +50,7 @@
                                 $mensagem = "Seu cachorrinho possui aproximadamente $idadeConvertida anos em idade de cachorros!";
                             }
                         }
-                        break;
+                        break; // termina o código para não prosseguir para o próximo case
                 
                     case 'medio':
                         if ($idade <= 2) {
