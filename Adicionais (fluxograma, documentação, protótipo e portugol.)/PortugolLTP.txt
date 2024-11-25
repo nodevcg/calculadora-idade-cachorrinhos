@@ -1,0 +1,82 @@
+inicio
+    // Declaração de variáveis
+    caractere: porte, mensagem;
+    real idade, idadeConvertida;
+
+    mensagem = ""; // Inicialização de mensagem com valor vazio
+
+    // Exibição do título
+    escrever("Bem-vindo à Calculadora de Idade para Cachorrinhos!\n\n");
+
+    // Entrada de dados do porte
+    escrever("Insira o porte do cachorro: ");
+    escrever("Digite o número correspondente ao porte: ");
+    ler(porte);
+
+    // Entrada de dados da idade
+    escrever("Insira a idade do cachorro (em anos): ");
+    ler(idade);
+
+    // Inicialização da idade convertida
+    idadeConvertida <- 0;
+
+    // Processamento com base no porte selecionado
+    se (porte = "1") entao
+        // Porte pequeno
+        se (idade <= 2) entao
+            idadeConvertida <- idade * 12.5;
+        fimse.
+        se (idade > 2) entao
+            idadeConvertida <- 25 + (idade - 2) * 4.5;
+        fimse.
+
+        // Mensagem especial para idade avançada
+        se (idade > 22) entao
+            mensagem = "Uau, parabéns! Seu cachorrinho está vivendo bastante para um cachorrinho de porte pequeno!\n";
+        fimse.
+        mensagem = mensagem + "Seu cachorrinho possui aproximadamente " + idadeConvertida + " anos em idade de humanos!";
+    
+    senao
+        se (porte = "2") entao
+            // Porte médio
+            se (idade <= 2) entao
+                idadeConvertida <- idade * 10.5;
+            fimse.
+            se (idade > 2) entao
+                idadeConvertida <- 21 + (idade - 2) * 5.7;
+            fimse.
+
+            // Mensagem especial para idade avançada
+            se (idade > 13) entao
+                mensagem = "Uau, parabéns! Seu cachorrinho está vivendo bastante para um cachorrinho de porte médio!\n";
+            fimse.
+            mensagem = mensagem + "Seu cachorrinho possui aproximadamente " + idadeConvertida + " anos em idade de humanos!";
+
+        senao
+            se (porte = "3") entao
+                // Porte grande
+                se (idade <= 2) entao
+                    idadeConvertida <- idade * 9;
+                fimse.
+                se (idade > 2) entao
+                    idadeConvertida <- 18 + (idade - 2) * 9;
+                fimse.
+
+                // Mensagem especial para idade avançada
+                se (idade > 12) entao
+                    mensagem = "Uau, parabéns! Seu cachorrinho está vivendo bastante para um cachorrinho de porte grande!\n";
+                fimse.
+                mensagem = mensagem + "Seu cachorrinho possui aproximadamente " + idadeConvertida + " anos em idade de humanos!";
+            
+            senao
+                // Opção inválida
+                escrever("Opção de porte inválida! Por favor, reinicie o programa.\n");
+                retorne;
+            fimse.
+        fimse.
+    fimse.
+
+    // Exibição do resultado
+    escrever("Resultado:");
+    escrever(mensagem);
+fim.
